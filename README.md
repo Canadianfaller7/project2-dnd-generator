@@ -1,1 +1,1 @@
-# prjoject2-dnd-generator
+# project2-dnd-generator
