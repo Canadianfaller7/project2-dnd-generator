@@ -35,13 +35,6 @@ User.init(
         len: [8],
       },
     },
-    character_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'character',
-        key: 'id',
-      },
-    },
   },
   {
     hooks: {
