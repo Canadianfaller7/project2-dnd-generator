@@ -31,4 +31,3 @@ Inventory.belongsTo(Character, {
 });
 
 module.exports = { User, Character, Stats, Inventory };
-
