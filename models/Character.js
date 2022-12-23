@@ -31,17 +31,34 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    stats_id: {
+    strength: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'stats',
-        key: 'id',
-      },
+      allowNull: false,
     },
-    inventory_id: {
+    dexterity: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    constitution: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    wisdom: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    intelligence: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    charisma: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'inventory',
+        model: 'users',
         key: 'id',
       },
     },
@@ -49,7 +66,6 @@ Character.init(
   {
     sequelize,
     timestamps: false,
-    freezeTableName: true,
     underscored: true,
     modelName: 'character',
   }

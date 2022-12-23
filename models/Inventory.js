@@ -11,13 +11,24 @@ Inventory.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    bag: {
+    item_name: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
+    character_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'characters',
+        key: 'id',
+      },
+    },
+  },
+    {
     sequelize,
     timestamps: false,
-    freezeTableName: true,
     underscored: true,
     modelName: 'inventory',
   }
