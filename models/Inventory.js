@@ -13,7 +13,7 @@ Inventory.init(
     },
     bag: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     sequelize,
     timestamps: false,
