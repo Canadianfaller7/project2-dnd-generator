@@ -20,24 +20,24 @@ Character.init(
       allowNull: false,
     },
     class: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     gender: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     build: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     stats_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'stats',
-          key: 'id',
-        },
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'stats',
+        key: 'id',
       },
+    },
     inventory_id: {
       type: DataTypes.INTEGER,
       references: {
