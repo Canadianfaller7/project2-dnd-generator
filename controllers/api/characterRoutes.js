@@ -45,8 +45,8 @@ router.delete('/:id', withAuth, (req, res) => {
       user_id: req.session.user_id
     },
   })
-    .then((delectedCharacter) => {
-      res.json(delectedCharacter);
+    .then((selectedCharacter) => {
+      res.json(selectedCharacter);
     })
     .catch((err) => {
       res.json(err);
