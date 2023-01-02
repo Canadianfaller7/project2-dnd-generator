@@ -37,6 +37,27 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+////update character by id
+router.put('/:id', withAuth, async (req, res) => {
+  const characterData = await Character.update(
+    {
+      ...req.body
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  )
+    .then((updatedCharacter) => {
+      res.json(updatedCharacter);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json(err);
+    });
+});
+
 //delete character by id
 router.delete('/:id', withAuth, (req, res) => {
   Character.destroy({

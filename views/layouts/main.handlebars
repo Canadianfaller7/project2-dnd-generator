@@ -13,7 +13,7 @@
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-        <span role="img" aria-label="money">💸</span>
+        <span role="img" aria-label="dragon">&#128009</span>
         <a href="/">D&D Character Generator</a>
       </h1>
       <nav>
@@ -22,12 +22,15 @@
         <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <button><a href="/login">login</a></button>
+        <button><a href="/signup">Sign up</a></button>
         {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
+      <p>D&D Community Updates</p>
+      <div class="news/character container" <p>Recent News Displays Here</p> </div>
+      <div class="video container"><a>Related Video</a></div>      <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
@@ -37,6 +40,7 @@
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
+  <div class="news/character container"><a>Saved Characters Display her when logged in</a></div>
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
