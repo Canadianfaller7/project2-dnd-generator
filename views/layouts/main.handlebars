@@ -28,7 +28,9 @@
       </nav>
     </header>
     <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
+      <p>D&D Community Updates</p>
+      <div class="news/character container" <p>Recent News Displays Here</p> </div>
+      <div class="video container"><a>Related Video</a></div>      <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
@@ -38,6 +40,7 @@
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
+  <div class="news/character container"><a>Saved Characters Display her when logged in</a></div>
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
