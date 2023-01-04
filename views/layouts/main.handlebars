@@ -1,52 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Character Generator</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D&D Character Generator</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+  <body>
+    <div class="flex-column justify-space-around">
+      <header class="heading">
+        <h1>
+          <span role="img" aria-label="dragon">&#128009</span>
+          <a href="/">D&D Character Generator</a>
+        </h1>
 
-<body>
-  <div class="flex-column justify-space-around">
-    <header class="heading">
-      <h1>
-        <span role="img" aria-label="dragon">&#128009</span>
-        <a href="/">D&D Character Generator</a>
-      </h1>
+        <nav>
+          <!-- Conditionally render login or logout links -->
+          {{#if logged_in}}
+          <a href="/profile">profile</a> |
+          <button class="no-button" id="logout">logout</button>
+          {{else}}
+          <button><a href="/login">login</a></button>
+          <button><a href="/signup">Sign up</a></button>
+          {{/if}}
+        </nav>
+      </header>
       
-    
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <button><a href="/login">login</a></button>
-        <button><a href="/signup">Sign up</a></button>
-        {{/if}}
-      </nav>
-    </header>
-    
-    <main class="main" Community Updates>
-      
-      <!-- Render the sub layout -->
-      {{{ body }}}
-      
-    </main>
-    <footer>
-      
-    </footer>
-  </div>
-  
+      <main>
 
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-  
-</body>
+        <!-- Render the sub layout -->
+        {{{ body }}}
+        
+      </main>
+      <footer>
+        
+      </footer>
+    </div>
 
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
 </html>

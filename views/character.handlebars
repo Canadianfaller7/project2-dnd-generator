@@ -1,7 +1,7 @@
 <form class="charsheet">
   <header>
     <section class="charname">
-      <label for="charname">Character Name</label><input name="charname" placeholder="Thoradin Fireforge" />
+      <label for="charname">Character Name</label><input id="charname" name="charname" placeholder="Thoradin Fireforge" />
     </section>
     <section class="misc">
       <ul>
@@ -15,7 +15,7 @@
           <label for="playername">Player Name</label><input name="playername" placeholder="Player McPlayerface">
         </li>
         <li>
-          <label for="race">Race</label><input name="race" placeholder="Half-elf" />
+          <label for="race">Race</label><input id="race"  name="race" placeholder="Half-elf" />
         </li>
         <li>
           <label for="alignment">Alignment</label><input name="alignment" placeholder="Lawful Good" />
@@ -33,7 +33,7 @@
           <ul>
             <li>
               <div class="score">
-                <label for="Strengthscore">Strength</label><input name="Strengthscore" placeholder="10" />
+                <label for="Strengthscore">Strength</label><input id="Strengthscore"  name="Strengthscore" placeholder="10" />
               </div>
               <div class="modifier">
                 <input name="Strengthmod" placeholder="+0" />
@@ -41,7 +41,7 @@
             </li>
             <li>
               <div class="score">
-                <label for="Dexterityscore">Dexterity</label><input name="Dexterityscore" placeholder="10" />
+                <label for="Dexterityscore">Dexterity</label><input id="Dexterityscore" name="Dexterityscore" placeholder="10" />
               </div>
               <div class="modifier">
                 <input name="Dexteritymod" placeholder="+0" />
@@ -57,7 +57,7 @@
             </li>
             <li>
               <div class="score">
-                <label for="Wisdomscore">Wisdom</label><input name="Wisdomscore" placeholder="10" />
+                <label for="Wisdomscore">Wisdom</label><input id="Wisdomscore" name="Wisdomscore" placeholder="10" />
               </div>
               <div class="modifier">
                 <input name="Wisdommod" placeholder="+0" />
@@ -73,7 +73,7 @@
             </li>
             <li>
               <div class="score">
-                <label for="Charismascore">Charisma</label><input name="Charismascore" placeholder="10" />
+                <label for="Charismascore">Charisma</label><input id="Charismascore" name="Charismascore" placeholder="10" />
               </div>
               <div class="modifier">
                 <input name="Charismamod" placeholder="+0" />
@@ -360,6 +360,9 @@
           <label for="features">Features & Traits</label><textarea name="features"></textarea>
         </div>
       </section>
+      <div class="col-md-6">
+        <button type="submit" class="submit-character btn btn-dark">Submit Character</button>
+      </div>
     </section>
   </main>
 </form>

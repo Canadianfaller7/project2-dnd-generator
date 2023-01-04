@@ -1712,6 +1712,11 @@ form [type='radio'] {
   background: blue;
 }
 
+div .create-new{
+  text-decoration: none;
+  color: black;
+}
+
 .hide {
   display: none !important;
 }
