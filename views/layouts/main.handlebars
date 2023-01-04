@@ -11,11 +11,13 @@
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
+    <header class="heading">
       <h1>
         <span role="img" aria-label="dragon">&#128009</span>
         <a href="/">D&D Character Generator</a>
       </h1>
+      
+    
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
@@ -27,19 +29,27 @@
         {{/if}}
       </nav>
     </header>
-    <main class="container container-fluid mt-5">
+    
+    <main class="main" Community Updates>
+      
+      <!-- Render the sub layout -->
       {{{ body }}}
+      
     </main>
     <footer>
       
     </footer>
   </div>
+  
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
-  {{!-- <div class="news/character container"><a>Saved Characters Display her when logged in</a></div> --}}
+  <div class="charbutton">
+  <button class="create new">Create New Character</button></div>
+  <div class="savedchars"><a>Saved Characters Display her when logged in</a></div>
   <script src="/js/logout.js"></script>
   {{/if}}
+  
 </body>
 
 </html>
