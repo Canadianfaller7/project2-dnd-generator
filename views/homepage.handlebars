@@ -1,6 +1,9 @@
 <body>
     {{#if logged_in}}
-        <div class="Welcome">Welcome User</div>
+        <div class="Welcome">Welcome {{name}}</div>
+        <div class="charbutton">
+        <button class="create new">Create New Character</button></div>
+        <div class="savedchars"><a>Saved Characters Display her when logged in</a></div>
     {{else}}
         <div class="community">
         D&D Community News
