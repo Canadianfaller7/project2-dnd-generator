@@ -22,14 +22,13 @@ router.get('/', async (req, res) => {
       characters,
       logged_in: req.session.logged_in,
     });
-    res.status(200).json(characterData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 // find one character by its `id` value
-router.get('/:id', async (req, res) => {
+router.get('/character/:id', async (req, res) => {
   try {
     const characterData = await Character.findByPk(req.params.id, {
       include: [
@@ -38,7 +37,13 @@ router.get('/:id', async (req, res) => {
         },
       ],
     });
-    res.status(200).json(characterData);
+
+    const character = characterData.get({ plain: true });
+
+    res.render('character', {
+        ...character,
+        logged_in: true,
+      });
   } catch (err) {
     res.status(500).json(err);
   }
