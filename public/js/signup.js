@@ -13,7 +13,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/profile');
     } else {
       alert('Error with creating your account. Please try again.');
     }
