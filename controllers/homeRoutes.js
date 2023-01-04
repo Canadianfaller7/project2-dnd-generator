@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
       character.get({ plain: true })
     );
 
-    res.render('profile', {
+    res.render('homepage', {
       characters,
       logged_in: req.session.logged_in,
     });
