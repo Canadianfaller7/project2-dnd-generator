@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Character, Inventory } = require('../models');
 const withAuth = require('../utils/auth');
 
-//get all characters
+//render homepage with characters if user is logged in
 router.get('/', async (req, res) => {
   try {
     const characterData = await Character.findAll({
@@ -27,30 +27,12 @@ router.get('/', async (req, res) => {
   }
 });
 
-// find one character by its `id` value
-router.get('/character', async (req, res) => {
-  try {
-    const characterData = await Character.findAll(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    const character = characterData.get({ plain: true });
-
-    res.render('character', {
-        ...character,
-        logged_in: req.session.logged_in
-      });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+// renders the create new character form if the user is logged in
+router.get('/character', withAuth, async (req, res) => {
+  res.render('character', {});
 });
 
-// find one character by its `id` value
+// renders the character by id
 router.get('/character/:id', async (req, res) => {
   try {
     const characterData = await Character.findByPk(req.params.id, {
@@ -64,10 +46,10 @@ router.get('/character/:id', async (req, res) => {
 
     const character = characterData.get({ plain: true });
 
-    res.render('character', {
-        ...character,
-        logged_in: req.session.logged_in
-      });
+    res.render('selectedcharacter', {
+      ...character,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -86,15 +68,15 @@ router.get('/profile', withAuth, async (req, res) => {
 
     res.render('profile', {
       ...user,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
+// If the user is already logged in, redirect the request to another route
 router.get('/character', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/profile');
     return;
@@ -103,8 +85,8 @@ router.get('/character', (req, res) => {
   res.render('character');
 });
 
+// If the user is already logged in, redirect the request to another route
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/profile');
     return;
@@ -113,8 +95,8 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+// If the user is already logged in, redirect the request to another route
 router.get('/signup', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/profile');
     return;
@@ -122,6 +104,5 @@ router.get('/signup', (req, res) => {
 
   res.render('signup');
 });
-
 
 module.exports = router;

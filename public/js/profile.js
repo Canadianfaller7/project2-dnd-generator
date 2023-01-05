@@ -48,9 +48,9 @@ document
     .querySelector('.submit-character')
     .addEventListener('submit', newCharacter);
 
-document
-  .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
+// document
+//   .querySelector('.project-list')
+//   .addEventListener('click', delButtonHandler);
 
         
   
