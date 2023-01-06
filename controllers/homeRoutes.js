@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 
     res.render('homepage', {
       characters,
-      logged_in: req.session.logged_in 
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -63,7 +63,12 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Character }],
+      include: [
+        { 
+          model: Character,
+          attributes: ['id'] ['name']
+        }
+      ],
     });
 
     const user = userData.get({ plain: true });
@@ -72,20 +77,21 @@ router.get('/profile', withAuth, async (req, res) => {
       ...user,
       logged_in: true,
     });
+
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 // If the user is already logged in, redirect the request to another route
-router.get('/character', (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
-  }
+// router.get('/character', (req, res) => {
+//   if (req.session.logged_in) {
+//     res.redirect('/profile');
+//     return;
+//   }
 
-  res.render('character');
-});
+//   res.render('character');
+// });
 
 // If the user is already logged in, redirect the request to another route
 router.get('/login', (req, res) => {
