@@ -31,6 +31,11 @@ Character.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    exp:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    
     build: {
       type: DataTypes.STRING,
       allowNull: false,
