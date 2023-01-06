@@ -2,7 +2,6 @@ const { Character } = require('../models');
 
 const characterData = [
   {
-    id: 1,
     name: 'Derrek Jonno',
     race: 'dark-elf',
     class: 'warlock',
@@ -19,7 +18,6 @@ const characterData = [
     user_id: 1
   },
   {
-    id: 2,
     name: 'Vilithrax',
     race: 'Dragonborn',
     class: 'Cleric',
