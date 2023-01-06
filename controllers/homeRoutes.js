@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 
     res.render('homepage', {
       characters,
-      logged_in: req.session.logged_in,
+      logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);
@@ -28,8 +28,10 @@ router.get('/', async (req, res) => {
 });
 
 // renders the create new character form if the user is logged in
-router.get('/character', withAuth, async (req, res) => {
-  res.render('character', {});
+router.get('/character', (req, res) => {
+  res.render('character', {
+    logged_in: true
+  });
 });
 
 // renders the character by id
@@ -48,7 +50,7 @@ router.get('/character/:id', async (req, res) => {
 
     res.render('selectedcharacter', {
       ...character,
-      logged_in: req.session.logged_in,
+      logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);
