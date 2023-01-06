@@ -9,6 +9,7 @@ const characterData = [
     gender: 'Male',
     level: 8,
     build: 'average',
+    exp: 3240,
     strength: 16,
     dexterity: 11,
     constitution: 19,
