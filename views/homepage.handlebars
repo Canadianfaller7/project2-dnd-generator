@@ -8,17 +8,6 @@
     <div>
         <a href="/character" class="btn create-new">Create New Character</a>
     </div>
-    <div class="savedchars">
-        {{#each characters as |character| }}
-            <div class="row mb-4 character">
-                <div class="col-md-5">
-                    <h2>
-                        <a href="/character/{{character.id}}">{{character.name}}</a>
-                    </h2>
-                </div>
-            </div>
-        {{/each}}
-    </div>
     {{else}}
     <div class="main">
         <h3>
