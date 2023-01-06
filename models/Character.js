@@ -27,6 +27,10 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    level: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     build: {
       type: DataTypes.STRING,
       allowNull: false,
