@@ -4,7 +4,7 @@ const characterData = [
   {
     name: 'Derrek Jonno',
     race: 'dark-elf',
-    class: 'warlock',
+    character_class: 'warlock',
     gender: 'Male',
     level: 8,
     build: 'average',
@@ -20,7 +20,7 @@ const characterData = [
   {
     name: 'Vilithrax',
     race: 'Dragonborn',
-    class: 'Cleric',
+    character_class: 'Cleric',
     gender: 'Female',
     level: 10,
     build: 'Large',

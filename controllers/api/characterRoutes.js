@@ -31,6 +31,8 @@ router.post('/', withAuth, async (req, res) => {
       ...req.body,
       user_id: req.session.user_id
     });
+
+    console.log(`\n\n${newCharacter}\n\n`);
     res.status(200).json(newCharacter);
   } catch (err) {
     res.status(400).json(err);

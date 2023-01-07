@@ -1,5 +1,5 @@
 {{#if logged_in}}
-<form class="charsheet">
+<form class="charsheet create-form">
   <header>
     <section class="charname">
       <label for="char-name">Character Name</label>
@@ -8,16 +8,13 @@
     <section class="misc">
       <ul>
         <li>
-          <label  for="level">Level</label><input id ="level" name="level" placeholder="8"/>
+          <label  for="level">Level</label><input id="level" name="level" placeholder="8"/>
           </li>
         <li>
           <label for="class">Class</label><input id="class" name="class" placeholder="Paladin" />
         </li>
         <li>
-          <label for="gender">Gender</label><input id = "gender" name="gender" placeholder="Male" />
-        </li>
-        <li>
-          <label for="playername">Player Name</label><input  id = "playername" name="playername" placeholder="Matthew Mercer">
+          <label for="gender">Gender</label><input id="gender" name="gender" placeholder="Male" />
         </li>
         <li>
           <label for="race">Race</label><input id="race"  name="race" placeholder="God Himself" />
@@ -94,7 +91,7 @@
             </li>
           </ul>
         </div>
-    <section>x 
+    <section> 
       </section>
        <section id = "char-equipment" class="equipment">
         <div>
@@ -111,3 +108,5 @@
   </footer>
 </form>
 {{/if}}
+
+<script src="./js/create.js"></script>
