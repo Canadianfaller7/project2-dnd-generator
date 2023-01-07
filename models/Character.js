@@ -19,7 +19,7 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    class: {
+    character_class: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -27,6 +27,15 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    level: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    exp: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+
     build: {
       type: DataTypes.STRING,
       allowNull: false,

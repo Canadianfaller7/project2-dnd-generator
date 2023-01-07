@@ -1,0 +1,112 @@
+{{#if logged_in}}
+<form class="charsheet create-form">
+  <header>
+    <section class="charname">
+      <label for="char-name">Character Name</label>
+      <input id="char-name" name="char-name" type="text" placeholder="Thoradin Fireforge" />
+    </section>
+    <section class="misc">
+      <ul>
+        <li>
+          <label  for="level">Level</label><input id="level" name="level" placeholder="8"/>
+          </li>
+        <li>
+          <label for="class">Class</label><input id="class" name="class" placeholder="Paladin" />
+        </li>
+        <li>
+          <label for="gender">Gender</label><input id="gender" name="gender" placeholder="Male" />
+        </li>
+        <li>
+          <label for="race">Race</label><input id="race"  name="race" placeholder="God Himself" />
+        </li>
+        <li>
+          <label for="build">build</label><input id= "build" name="build" placeholder="To be determined" />
+        </li>
+        <li>
+          <label for="exp">Experience Points</label><input id ="exp"name="exp" placeholder="3240" />
+        </li>
+      </ul>
+    </section>
+  </header>
+  <nav>
+    <section>
+      <div class="col-md-6">
+        <button type="submit" class="submit-character btn btn-dark">Submit Character</button>
+      </div>
+    </section>
+
+  </nav>
+  <main>
+    <section>
+      <section class="attributes">
+        <div class="scores">
+          <ul>
+            <li>
+              <div class="score">
+                <label for="Strengthscore">Strength</label><input id="Strengthscore"  name="Strengthscore" placeholder="10" />
+              </div>
+              <div class="modifier">
+                <input name="Strengthmod" placeholder="+0" />
+              </div>
+            </li>
+            <li>
+              <div class="score">
+                <label for="Dexterityscore">Dexterity</label><input id="Dexterityscore" name="Dexterityscore" placeholder="10" />
+              </div>
+              <div class="modifier">
+                <input name="Dexteritymod" placeholder="+0" />
+              </div>
+            </li>
+            <li>
+              <div class="score">
+                <label for="Constitutionscore">Constitution</label><input id ="Constitutionscore" name="Constitutionscore" placeholder="10" />
+              </div>
+              <div class="modifier">
+                <input name="Constitutionmod" placeholder="+0" />
+              </div>
+            </li>
+            <li>
+              <div class="score">
+                <label for="Wisdomscore">Wisdom</label><input id="Wisdomscore" name="Wisdomscore" placeholder="10" />
+              </div>
+              <div class="modifier">
+                <input name="Wisdommod" placeholder="+0" />
+              </div>
+            </li>
+            <li>
+              <div class="score">
+                <label for="Intelligencescore">Intelligence</label><input id ="Intelligencescore" name="Intelligencescore" placeholder="10" />
+              </div>
+              <div class="modifier">
+                <input name="Intelligencemod" placeholder="+0" />
+              </div>
+            </li>
+            <li>
+              <div class="score">
+                <label for="Charismascore">Charisma</label><input id="Charismascore" name="Charismascore" placeholder="10" />
+              </div>
+              <div class="modifier">
+                <input name="Charismamod" placeholder="+0" />
+              </div>
+            </li>
+          </ul>
+        </div>
+    <section> 
+      </section>
+       <section id = "char-equipment" class="equipment">
+        <div>
+          <label>Inventory</label>
+          </div>
+          <textarea placeholder="Item list here"></textarea>
+        </div>
+      </section>
+    </section>
+    
+  </main>
+  <footer>
+    Thank you {{user.name}} for using our character generator!
+  </footer>
+</form>
+{{/if}}
+
+<script src="./js/create.js"></script>

@@ -2,12 +2,13 @@ const { Character } = require('../models');
 
 const characterData = [
   {
-    id: 1,
     name: 'Derrek Jonno',
-    race: 'warlock',
-    class: 'Fighter',
+    race: 'dark-elf',
+    character_class: 'warlock',
     gender: 'Male',
-    build: 'Human Polearm Fighter',
+    level: 8,
+    build: 'average',
+    exp: 3240,
     strength: 16,
     dexterity: 11,
     constitution: 19,
@@ -17,12 +18,13 @@ const characterData = [
     user_id: 1
   },
   {
-    id: 2,
     name: 'Vilithrax',
     race: 'Dragonborn',
-    class: 'warlock',
-    gender: 'Male',
-    build: 'Warforged Cleric',
+    character_class: 'Cleric',
+    gender: 'Female',
+    level: 10,
+    build: 'Large',
+    exp: 3240,
     strength: 14,
     dexterity: 8,
     constitution: 16,
