@@ -9,23 +9,22 @@
 
   <body>
     <div class="heading">
-
-        <h1>
-          <span role="img" aria-label="dragon">&#128009</span>
-          <a class="grid  " href="/">D&D Character Generator</a>
-        </h1>
+      <h1>
+        <span role="img" aria-label="dragon">&#128009</span>
+        <a class="grid  " href="/">D&D Character Generator</a>
+      </h1>
     </div>
      <nav>
       <div class="hero">
-        <img src="./assets/01.jpg" alt="">
-        <embed src="assets\music\Now-We-Ride.mp3" type="audio/mpeg">
-      </div>
-          
+        <img src="./assets/images/01.jpg" alt="">
+        <iframe src="./assets/music/250-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+        <audio id="player" controls autoplay loop>
+          <source src="./assets/music/Now-We-Ride.mp3" type="audio/mp3">
+        </audio>
+        {{!-- <embed src="./assets/music/Now-We-Ride.mp3" type="audio/mpeg"> --}}
+      </div>    
     </nav>
-      
-      
-       
-          <!-- Conditionally render login or logout links -->
+    <!-- Conditionally render login or logout links -->
     {{#if logged_in}}
       <div class="profilebutton">
         <a href="/profile">profile</a> |
@@ -40,15 +39,10 @@
         <div class="mainbottom">
         
         </div>
-          
-          {{/if}}
-        
+      {{/if}}
       </header>
       
-      
-      
       <main>
-
         <!-- Render the sub layout -->
         {{{ body }}}
         
@@ -56,8 +50,6 @@
       <footer>
         
       </footer>
-    
-
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
     <script src="/js/logout.js"></script>

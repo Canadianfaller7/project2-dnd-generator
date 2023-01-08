@@ -4,10 +4,14 @@
   </div>
 </div>
 
-<div class="row mt-4 ml-5">
+{{!-- <div class="row mt-4 ml-5">
   <div class="col-md-6">
     <h2 class="create-new">Create New Character</h2>
   </div>
+</div> --}}
+<div>
+  <a href="/character" class="btn create-new" >Create New Character</a>
+</div>
 
 <div class="community">
   <a href="https://www.youtube.com/@criticalrole">Community content brought to you by our friends at Critical Role</a>
@@ -16,7 +20,7 @@
     </div>
 </div>
 
-  {{#if logged_in}}
+  {{!-- {{#if logged_in}}
   <form class="charsheet create-form">
     <header>
       <section class="charname">
@@ -130,6 +134,7 @@
       </section>
     </main>
   </form>
+  {{/if}} --}}
   
   {{#if characters.length}}
   <div class="col-md-6 project-list">
@@ -154,7 +159,6 @@
       Thank you {{name}} for using our character generator!
     </p> 
   </footer>
-  {{/if}}
 </div>
 
 <script src="./js/create.js"></script>
