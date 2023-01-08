@@ -8,24 +8,44 @@
   </head>
 
   <body>
-    <div class="flex-column justify-space-around">
-      <header class="heading">
+    <div class="heading">
+
         <h1>
           <span role="img" aria-label="dragon">&#128009</span>
-          <a href="/">D&D Character Generator</a>
+          <a class="grid  " href="/">D&D Character Generator</a>
         </h1>
-
-        <nav>
+    </div>
+     <nav>
+      <div class="hero">
+        <img src="./assets/01.jpg" alt="">
+        <embed src="assets\music\Now-We-Ride.mp3" type="audio/mpeg">
+      </div>
+          
+    </nav>
+      
+      
+       
           <!-- Conditionally render login or logout links -->
-          {{#if logged_in}}
-          <a href="/profile">profile</a> |
-          <button class="no-button" id="logout">logout</button>
-          {{else}}
-          <button><a href="/login">login</a></button>
+    {{#if logged_in}}
+      <div class="profilebutton">
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+      </div>
+      {{else}}
+        <div class="button1">
+          
+         <button><a href="/login">login</a></button>
           <button><a href="/signup">Sign up</a></button>
+        </div>
+        <div class="mainbottom">
+        
+        </div>
+          
           {{/if}}
-        </nav>
+        
       </header>
+      
+      
       
       <main>
 
@@ -36,7 +56,7 @@
       <footer>
         
       </footer>
-    </div>
+    
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
