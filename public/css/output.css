@@ -516,7 +516,7 @@ video {
 
 
 
-
+/* 
 .red {
   background: red;
 }
@@ -1153,4 +1153,111 @@ form.charsheet main section.features div textarea {
   border: 0;
   padding: 5px;
   height: 43em;
+} */
+
+body{
+  display:grid
 }
+
+h1{
+  height: 200px;
+  
+
+  
+  font-size: 48px;
+  font-family:cursive,-fantasy;
+  
+}
+
+.form-group{
+  display: grid;
+  justify-content: center;
+  background-color: #9ca3af;
+  font-size: large;
+  font-family:cursive,-fantasy;
+}
+
+.button1{
+  display:grid
+  
+}
+
+.hero{
+  height: 400px;
+  background-color: #9ca3af;
+  background-image: url('./assets/01.jpg');
+  width: auto;
+  
+  
+}
+
+.mainbottom{
+  height: 600px;
+  background-color: #9ca3af;
+}
+
+button{
+  font-family:cursive,-fantasy;
+  font-size: 20px;
+  background-color: #aa2f2f;
+  color: #fff;
+}
+
+
+
+create-new{
+  font-family:cursive,-fantasy;
+  
+}
+
+form.form.signup-form{
+  font-family:cursive,-fantasy;
+  
+}
+
+.community{
+  display: grid;
+  font: bolder;
+  color:#fff;
+  padding: 1em;
+  border: #9ca3af;
+  border-style: ridge;
+  border-radius: 5em;
+  justify-content: center;
+  font-size: 23px;
+  font-family:cursive,-fantasy;
+  background-image: url(https://images.unsplash.com/photo-1510218830377-2e994ea9087d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1916&q=80);
+  
+  
+}
+.btn.create-new{
+  display: grid;
+  justify-content: center;
+  color:#fff;
+  background-color: #aa2f2f;
+}
+
+footer{
+  color: #fdfdfd;
+  background-color: #aa2f2f;
+  font-size: 14px;
+  font-family: cursive,-fantasy;
+}
+
+input{
+  color: #9ca3af;
+  font-family: cursive,-fantasy;
+
+}
+
+.scores{
+  color: #aa2f2f;
+  font-family: cursive,-fantasy;
+  display: grid;
+  border-style: ridge;
+  border-color: black;
+  justify-content: center;
+  
+  
+}
+
