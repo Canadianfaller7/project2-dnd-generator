@@ -534,6 +534,10 @@ div .create-new{
   display: none !important;
 }
 
+.cap-letter {
+  text-transform: capitalize;
+}
+
 textarea {
   font-size: 12px;
   text-align: left;

@@ -11,7 +11,7 @@
           <label  for="level">Level</label><input id ="level" name="level" value="{{level}}"/>
           </li>
         <li>
-          <label for="class">Class</label><input id="class" name="class" value="{{class}}"/>
+          <label for="class">Class</label><input id="class" name="class" value="{{character_class}}"/>
         </li>
         <li>
           <label for="gender">Gender</label><input id = "gender" name="gender" value="{{gender}}"/>
@@ -32,13 +32,12 @@
     </section>
   </header>
   <nav>
-    <section>
-      <div class="col-md-6">
-        <button type="submit" class="submit-character btn btn-dark">Submit Character</button>
-      </div>
-    </section>
-
-  </nav>
+      <section>
+        <div class="col-md-6">
+          <button type="submit" class="submit-character btn btn-dark">Update Character</button>
+        </div>
+      </section>
+    </nav>
   <main>
     <section>
       <section class="attributes">
@@ -100,7 +99,7 @@
         <div>
           <label>Inventory</label>
           </div>
-          <textarea value="{{item_name}}"></textarea>
+          <textarea>{{inventory.item_name}}</textarea>
         </div>
       </section>
     </section>
