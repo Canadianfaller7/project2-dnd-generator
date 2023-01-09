@@ -538,12 +538,13 @@ div .create-new{
   text-transform: capitalize;
 }
 
+
 .modifier{
   padding: 1em;
 }
 
 textarea {
-  font-size: 12px;
+  font-size: 18px;
   text-align: left;
   width: calc(100% - 20px - 2px);
   border-radius: 10px;
@@ -551,6 +552,7 @@ textarea {
   resize: none;
   overflow: hidden;
   height: 20em;
+  display: grid;
 }
 
 input[type=checkbox] {
@@ -559,6 +561,7 @@ input[type=checkbox] {
 
 div.box {
   margin-top: 10px;
+  display: grid;
 }
 
 form.charsheet {
@@ -568,6 +571,7 @@ form.charsheet {
   margin-right: auto;
   margin-left: auto;
   margin-top: 10px;
+  display: grid;
 }
 form.charsheet div.textblock {
   display: grid;
@@ -584,30 +588,38 @@ form.charsheet div.textblock label {
   border-radius: 0 0 10px 10px;
   padding: 4px 0;
   font-weight: bold;
+  display: grid;
 }
 form.charsheet div.textblock textarea {
   border: 1px solid black;
+  display: grid;
 }
 form.charsheet ul {
   margin: 0;
   padding: 0;
+  display: grid;
 }
 form.charsheet ul li {
   list-style-image: none;
   display: block;
+  display: grid;
 }
 form.charsheet ::-moz-placeholder {
   color: #bbb;
+  display: grid;
 }
 form.charsheet :-ms-input-placeholder {
-  color: #bbb;
+  color: black;
+  display: grid;
 }
 form.charsheet ::placeholder {
-  color: #bbb;
+  color: rgb(165, 165, 165);;
+  display: grid;
 }
 form.charsheet label {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 18px;
+  display: grid;
 }
 form.charsheet header {
   display: grid;
@@ -620,7 +632,7 @@ form.charsheet header section.charname {
   border-radius: 10px 0 0 10px;
   padding: 5px 0;
   background-color: #eee;
-  width: 30%;
+  width: 100%;
   display: grid;
   bottom: 0;
   top: 0;
@@ -629,32 +641,37 @@ form.charsheet header section.charname {
 form.charsheet header section.charname input {
   padding: 0.5em;
   margin: 5px;
-  border: 0;
+  border: 0em;
+  display: grid;
 }
 form.charsheet header section.charname label {
-  padding-left: 1em;
+  padding-left: 4em;
+  display: grid;
 }
 form.charsheet header section.misc {
-  width: 70%;
+  width: 100%;
   border: 1px solid black;
   border-radius: 10px;
   padding-left: 1em;
   padding-right: 1em;
+  display: grid;
 }
 form.charsheet header section.misc ul {
   padding: 10px 0px 5px 0px;
   display: grid;
 }
 form.charsheet header section.misc ul li {
-  width: 33.33333%;
+  width: 100%;
   display: grid;
 }
 form.charsheet header section.misc ul li label {
-  margin-bottom: 5px;
+  margin-bottom: 2px;
+  display: grid;
 }
 form.charsheet header section.misc ul li input {
   border: 0;
   border-bottom: 1px solid #ddd;
+  display: grid;
 }
 form.charsheet main {
   display: grid;
@@ -668,6 +685,7 @@ form.charsheet main div.label-container {
   margin-top: 6px;
   border: 1px solid black;
   border-left: 0;
+  display: grid;
   text-align: center;
 }
 form.charsheet main div.label-container > label {
@@ -676,158 +694,129 @@ form.charsheet main div.label-container > label {
   top: 1px;
   transform: translate(0%, 50%);
   width: 100%;
-  font-size: 8px;
+  font-size: 18px;
+  display: grid;
 }
 form.charsheet main > section {
-  width: 32%;
+  width: 100%;
   display: grid;
   
 }
 form.charsheet main > section section.attributes {
   width: 100%;
   display: grid;
+  font-size: x-large;
   justify-content: space-between;
 }
 form.charsheet main > section section.attributes div.scores {
-  width: 101px;
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
   background-color: #bbb;
   border-radius: 10px;
   padding-bottom: 5px;
 }
 form.charsheet main > section section.attributes div.scores label {
-  font-size: 8px;
+  font-size: 18px;
   font-weight: bold;
+  display: grid;
 }
 form.charsheet main > section section.attributes div.scores ul {
-  display: flex;
+  display: grid;
   justify-content: space-around;
   align-items: center;
   height: 100%;
 }
 form.charsheet main > section section.attributes div.scores ul li {
-  height: 80px;
-  width: 70px;
+  height: 100%;
+  width: 100%;
   background-color: white;
   border: 1px solid black;
   text-align: center;
-  display: flex;
+  justify-content: center;
+  display: grid;
   border-radius: 10px;
+  
+  margin: auto;
 }
 form.charsheet main > section section.attributes div.scores ul li input {
   width: 100%;
   padding: 0;
   border: 0;
+  display: grid;
 }
 form.charsheet main > section section.attributes div.scores ul li div.score input {
   text-align: center;
   font-size: 40px;
   padding: 2px 0px 0px 0px;
   background: white;
+  display: grid;
+  color: midnightblue
 }
 form.charsheet main > section section.attributes div.scores ul li div.modifier {
-  margin-top: 3px;
+  
+  display: grid;
 }
 form.charsheet main > section section.attributes div.scores ul li div.modifier input {
-  background: white;
-  width: 30px;
-  height: 20px;
+  background: rgb(1, 52, 21);
+  display: grid;
+  width: 100%;
+  height: 40px;
   border: 1px inset black;
-  border-radius: 20px;
-  margin: -1px;
   text-align: center;
+  justify-content: center;
+  color: whitesmoke;
+  font-size: 24;
 }
-form.charsheet main > section section.attributes div.attr-applications div.inspiration {
-  display: flex;
-}
-form.charsheet main > section section.attributes div.attr-applications div.inspiration input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: 1px solid black;
-  padding: 15px;
-  border-radius: 10px;
-}
-form.charsheet main > section section.attributes div.attr-applications div.proficiencybonus {
-  display: grid;
+ 
   
-}
-form.charsheet main > section section.attributes div.attr-applications div.proficiencybonus input {
-  width: 30px;
-  height: 28px;
-  border: 1px solid black;
-  text-align: center;
-  border-radius: 10px;
-}
-form.charsheet main > section section.attributes div.attr-applications div.list-section {
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px 5px;
-}
-form.charsheet main > section section.attributes div.attr-applications div.list-section div.label {
-  margin-top: 10px;
-  margin-bottom: 2.5px;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: bold;
-}
-form.charsheet main > section section.attributes div.attr-applications div.list-section ul li {
-  display: grid;
-  align-items: center;
-}
-form.charsheet main > section section.attributes div.attr-applications div.list-section ul li > * {
-  margin-left: 5px;
-}
-form.charsheet main > section section.attributes div.attr-applications div.list-section ul li label {
-  text-transform: none;
-  font-size: 8px;
-  text-align: left;
-  order: 3;
-}
-form.charsheet main > section section.attributes div.attr-applications div.list-section ul li label span.skill {
-  color: #bbb;
-}
-form.charsheet main > section section.attributes div.attr-applications div.list-section ul li input[type=text] {
-  width: 30px;
-  font-size: 12px;
-  text-align: center;
-  border: 0;
-  border-bottom: 1px solid black;
-  order: 2;
-}
-form.charsheet main > section section.attributes div.attr-applications div.list-section ul li input[type=checkbox] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 10px;
-  height: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
-  order: 1;
-  font-family: cursive,-fantasy;
-}
-form.charsheet main > section section.attributes div.attr-applications div.list-section ul li input[type=checkbox]:checked {
-  background-color: black;
-}
+  
+  
+  
+  
+  
+ 
+
+
+
 
 form.charsheet main{
   display: grid;
+  
 
 }
+
 section.attributes{
   display: grid;
+  hei
+}
+
+div.items{
+  display: grid;
+  width: 100%;
 }
 
 
 
 section.equipment-container{
   display: grid;
+  grid-area: 1;
+  color: black;
+  font-size: 18px;
+  
   
 }
 
+
+
 h3{
-  
+  display: grid;
   font-family: cursive,-fantasy;
+}
+
+input.cap-letter{
+display: grid;
+
 }
 
 
@@ -840,72 +829,42 @@ h3{
 
 form.charsheet main section.equipment {
   border: 1px solid black;
-  border-radius: 10px;
-  margin-top: 10px;
+  display: grid;
 }
 form.charsheet main section.equipment > div > input{
-  border: 1px dotted black;
+  border: 1px solid black;
+  color: mediumslateblue;
 }
 form.charsheet main section.equipment > div > label {
-  
+  display: grid;
   order: 3;
   text-align: center;
-  flex: 100%;
+  
+  
 }
 form.charsheet main section.equipment > div > textarea {
   border: 1px solid black;
   flex: 1;
   border: 0;
-}
-form.charsheet main section.flavor {
-  padding: 10px;
-  background: #bbb;
-  border-radius: 10px;
-}
-form.charsheet main section.flavor div {
-  background: white;
   display: grid;
-  flex-direction: column-reverse;
-  padding: 5px;
-  border: 1px solid black;
+  color: black
 }
-form.charsheet main section.flavor div label {
-  text-align: center;
-  font-size: 10px;
-  margin-top: 3px;
-}
-form.charsheet main section.flavor div textarea {
-  border: 0;
-  border-radius: 0;
-  height: 4em;
-}
-form.charsheet main section.flavor div:first-child {
-  border-radius: 10px 10px 0 0;
-}
-form.charsheet main section.flavor div:not(:first-child) {
-  margin-top: 10px;
-}
-form.charsheet main section.flavor div:last-child {
-  border-radius: 0 0 10px 10px;
-}
-form.charsheet main section.features {
-  padding: 10px;
-}
-form.charsheet main section.features div {
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
+
+
+
+
+
+
+
+
+
+main{
   display: grid;
-  flex-direction: column-reverse;
+
+  
 }
-form.charsheet main section.features div label {
-  text-align: center;
-}
-form.charsheet main section.features div textarea {
-  border: 0;
-  padding: 5px;
-  height: 43em;
-} */
+
+
 
 body{
   display: grid;
@@ -958,6 +917,8 @@ h1{
   font-size: x-large;
   
 }
+
+
 
 a:hover{
   background-color: #9ca3af;
@@ -1081,6 +1042,8 @@ a.btn.create-new{
   justify-content: center;
   color:#fff;
   background-color: #aa2f2f;
+  border-style: solid;
+  
 }
 
 footer{
@@ -1099,7 +1062,7 @@ footer{
 }
 
 input{
-  color: #9ca3af;
+  color: black;
   font-family: cursive,-fantasy;
 
 }
@@ -1111,8 +1074,50 @@ input{
   border-style: ridge;
   border-color: black;
   justify-content: center;
+  font-size: large;
   
 }
+
+
+.col-md-6.project-list{
+  color: rgb(7, 7, 7);
+  display: grid;
+  justify-content: center;
+  
+
+}
+
+.col-md-6.project-list:hover{
+  color: #aa2f2f;
+}
+h2{
+  font-size: x-large;
+  
+}
+
+.charsheet.create-form{
+  display: grid;
+  background-image: url('https://images.unsplash.com/photo-1460194436988-671f763436b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+
+  background-repeat: no-repeat;
+  background-size:auto
+  
+  
+}
+
+section.charname{
+  display: grid;
+  grid-area: 1/2;
+  color: mediumslateblue;
+  
+}
+
+section.misc{
+  display: grid;
+  grid-area: 1/3;
+  color: ghostwhite
+}
+
 
 
 
