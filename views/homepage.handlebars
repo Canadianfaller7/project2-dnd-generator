@@ -1,22 +1,21 @@
 <body>
-    {{#if logged_in}}
-    <div class="Welcome">
-        <h3>
-            Welcome!
-        </h3>
+    {{#if logged_in}}    
+    <div class="welcome">
+      <h3>
+          Welcome to our character generator!
+      </h3>
     </div>
     <div>
-        <a href="/character" class="btn create-new" >Create New Character</a>
+        <a href="/character" class="btn create-new" >Click Here to Create a New Character!</a>
     </div>
      <div class="community">
         <div class="crit">
             <a href="https://www.youtube.com/@criticalrole">Community content brought to you by our friends at Critical Role!</a>
         </div>
         <div class="video">
-            <iframe width="700" height="500" src="https://www.youtube.com/embed/XhkjjN7M0hk?list=PL1tiwbzkOjQxLSFOtwuzl-c6wEkjaqsv5" title="The Mighty Nein Reunited Part 1 | Unfinished Business" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+            <iframe width="700" height="500" src="https://www.youtube.com/embed/LpBIQhWAhuM?autoplay=1" title="Vox Machina vs. Mighty Nein" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
     {{!-- {{else}} --}}
-   
     {{/if}}
 </body>
