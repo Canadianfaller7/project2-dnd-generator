@@ -15,35 +15,46 @@
           <a class="grid  " href="/">D&D Character Generator</a>
         </h1>
     </div>
-     <nav>
+
+    
+    <nav>
       <div class="hero">
-        <img src="./assets/01.jpg" alt="">
-        <embed src="assets\music\Now-We-Ride.mp3" type="audio/mpeg">
+        
+
+         
       </div>
+        <div class="button1">
           
+          <button><a href="/login">Login</a></button>
+          <button><a href="/signup">Sign Up</a></button>
+        </div>
     </nav>
+
+      
+          
+    
       
       
        
           <!-- Conditionally render login or logout links -->
     {{#if logged_in}}
       <div class="profilebutton">
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a href="/profile">Profile</a> |
+        <button class="no-button" id="logout">Logout</button>
       </div>
       {{else}}
-        <div class="button1">
+      
+      
+        <footer>
+         <div class="music">
+            <iframe width="700" height="500" src="https://www.youtube.com/embed/eb73_mE0S-k?autoplay=1" title="Tavern Dance | RPG/D&D Tavern/Inn Music | 1 Hour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+          </div>
+        </footer>
+       
           
-         <button><a href="/login">login</a></button>
-          <button><a href="/signup">Sign up</a></button>
-        </div>
-        <div class="mainbottom">
+      {{/if}}
         
-        </div>
-          
-          {{/if}}
-        
-      </header>
       
       
       
@@ -53,9 +64,7 @@
         {{{ body }}}
         
       </main>
-      <footer>
-        
-      </footer>
+      
     
 
     <!-- Render script for logged in users only -->

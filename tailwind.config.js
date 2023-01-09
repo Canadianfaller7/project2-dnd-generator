@@ -11,7 +11,8 @@ module.exports = {
     extend: {
       colors:{ 
         royalPurple: "#3730a3"
-        royalGrey:   ""
+       
+        darkRed:"#aa2f2f"
 
       }
     },

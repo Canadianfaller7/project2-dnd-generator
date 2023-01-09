@@ -6,15 +6,10 @@
 
 <div class="row mt-4 ml-5">
   <div class="col-md-6">
-    <h2 class="create-new">Create New Character</h2>
+    <h2 class="create-new">Enter New Character Info:</h2>
   </div>
 
-<div class="community">
-  <a href="https://www.youtube.com/@criticalrole">Community content brought to you by our friends at Critical Role</a>
-    <div class="video">
-      <iframe width="700" height="500" src="https://www.youtube.com/embed/cGhVgjYSpIE?autoplay=1" title="Axiom Shaken | Critical Role | Campaign 3, Episode 43" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-</div>
+
 
   {{#if logged_in}}
   <form class="charsheet create-form">
@@ -125,11 +120,19 @@
       </section>
       <section>
         <div class="col-md-6">
-          <button type="submit" class="submit-character btn btn-dark">Create Character</button>
+          <button type="submit" class="submit-character btn btn-dark">Save Character</button>
         </div>
       </section>
     </main>
   </form>
+
+  <div class="community">
+  <a href="https://www.youtube.com/@criticalrole">Community content brought to you by our friends at Critical Role</a>
+    <div class="video">
+      <iframe width="700" height="500" src="https://www.youtube.com/embed/BRXBvjrJXQk?autoplay=1" title="New Animated Campaign 3 Opening Title | It’s Thursday Night (Critical Role Theme)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    
+</div>
   
   {{#if characters.length}}
   <div class="col-md-6 project-list">
