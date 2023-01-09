@@ -4,12 +4,12 @@ const inventoryData = [
   {
     id: 1,
     item_name: 'Antitoxin',
-    character_id: 1
+    character_id: 1,
   },
   {
     id: 2,
-    item_name: "Basic Fishing Equipment",
-    character_id: 2
+    item_name: 'Basic Fishing Equipment',
+    character_id: 2,
   },
 ];
 

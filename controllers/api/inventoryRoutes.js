@@ -4,14 +4,13 @@ const withAuth = require('../../utils/auth');
 
 //get inventory
 router.get('/', withAuth, async (req, res) => {
-    try {
-      const inventoryData = await Inventory.findAll({});
-      res.status(200).json(inventoryData);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
-
+  try {
+    const inventoryData = await Inventory.findAll({});
+    res.status(200).json(inventoryData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // find one inventory by its `id` value
 router.get('/:id', withAuth, async (req, res) => {
@@ -27,7 +26,7 @@ router.get('/:id', withAuth, async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
   try {
     const inventoryData = await Inventory.create({
-      ...req.body
+      ...req.body,
     });
     res.status(200).json(inventoryData);
   } catch (err) {
@@ -40,7 +39,7 @@ router.put('/:id', withAuth, (req, res) => {
   Inventory.update(
     {
       item_name: req.body.item_name,
-      character_id: req.body.character_id
+      character_id: req.body.character_id,
     },
     {
       where: {
@@ -58,7 +57,7 @@ router.put('/:id', withAuth, (req, res) => {
 });
 
 //delete inventory by id
-router.delete('/:id',  (req, res) => {
+router.delete('/:id', (req, res) => {
   Inventory.destroy({
     where: {
       id: req.params.id,
