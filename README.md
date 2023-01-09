@@ -4,7 +4,7 @@
 - This is a full stack website that allows a user to create an account, log in, create a D&D Character, save it to a database and keep up to date on current D&D news!
 
 - As we went through this project the biggest impact was learning how to work as a group, using Git and how to set up a project. We were tasked to work with multiple restAPI's and know to use their information to integrate with eachother in order to get results for the nearest breweries, and to save the returned information into local storage. The layout was built using the Bulma css framework with our project, a CSS framework other than bootstrap.
-* [Beer Finder](https://canadianfaller7.github.io/beer-finder/ "Named link title")
+* [D&D Character Generator](https://dndcharactergenerator.herokuapp.com/ "Named link title")
 
 ## Installation
 - Run npm i to install all required packages. 
@@ -15,7 +15,7 @@
 ## Usage
 - Create an account or Log in if you already have an account made already
 - From Profile page you will be able to watch a youtube video of some D&D content, view your created characters, and create new characters for new games!
-* [D&D Generator](https://dndcharactergenerator.herokuapp.com/ "Named link title")
+* [D&D Character Generator](https://dndcharactergenerator.herokuapp.com/ "Named link title")
 
 ## Credits
 - Aaron Morgan @craymorgana,
