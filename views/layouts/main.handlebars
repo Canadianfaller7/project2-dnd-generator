@@ -30,6 +30,12 @@
         <button class="no-button" id="logout">Logout</button>
       </div>
       {{else}}
+        <footer>
+         <div class="music">
+            <iframe width="700" height="500" src="https://www.youtube.com/embed/eb73_mE0S-k?autoplay=1" title="Tavern Dance | RPG/D&D Tavern/Inn Music | 1 Hour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+          </div>
+        </footer>
         
        
           
@@ -41,12 +47,7 @@
         <!-- Render the sub layout -->
         {{{ body }}}
       </main>
-      <footer>
-         <div class="music">
-            <iframe width="700" height="500" src="https://www.youtube.com/embed/eb73_mE0S-k?autoplay=1" title="Tavern Dance | RPG/D&D Tavern/Inn Music | 1 Hour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-            </iframe>
-          </div>
-      </footer>
+      
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
     <script src="/js/logout.js"></script>

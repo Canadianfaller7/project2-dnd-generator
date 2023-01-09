@@ -1,21 +1,21 @@
 <body>
     {{#if logged_in}}    
-    <div class="welcome">
-      <h3>
+        <div class="welcome">
+            <h3>
           Welcome to our character generator!
-      </h3>
-    </div>
-    <div>
-        <a href="/character" class="btn create-new" >Click Here to Create a New Character!</a>
-    </div>
-     <div class="community">
-        <div class="crit">
-            <a href="https://www.youtube.com/@criticalrole">Community content brought to you by our friends at Critical Role!</a>
+            </h3>
+        </div>
+        <div>
+            <a href="/character" class="btn create-new" >Click Here to Create a New Character!</a>
+        </div>
+        <div class="community">
+            <div class="crit">
+                <a href="https://www.youtube.com/@criticalrole">Community content brought to you by our friends at Critical Role!</a>
         </div>
         <div class="video">
             <iframe width="700" height="500" src="https://www.youtube.com/embed/LpBIQhWAhuM?autoplay=1" title="Vox Machina vs. Mighty Nein" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-    </div>
-    {{!-- {{else}} --}}
+    {{else}}
+    
     {{/if}}
 </body>
