@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     );
 
     res.render('homepage', {
-      characters,
+      ...characters,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
