@@ -4,9 +4,16 @@
   </div>
 </div>
 
+<div class="row mt-4 ml-5">
+  <div class="col-md-6">
+    <h2 class="create-new">Enter New Character Info:</h2>
+  </div>
+</div>
+
 <div>
   <a href='/character' class='btn create-new'>Create New Character</a>
 </div>
+
 
 <div>
   {{#if characters.length}}
@@ -22,13 +29,143 @@
                 href='/character/{{character.id}}'
               >{{character.name}}</a>
             </h4>
+
+
+  {{#if logged_in}}
+  <form class="charsheet create-form">
+    <header>
+      <section class="charname">
+        <label for="char-name">Character Name</label>
+        <input class="cap-letter" id="char-name" name="char-name" type="text" placeholder="Thoradin Fireforge"/>
+      </section>
+      <section class="misc">
+        <ul>
+          <li>
+            <label  for="level">Level</label>
+            <input id="level" name="level" placeholder="8"/>
+            </li>
+          <li>
+            <label for="class">Class</label>
+            <input class="cap-letter" id="class" name="class" placeholder="Paladin"/>
+          </li>
+          <li>
+            <label for="gender">Gender</label>
+            <input class="cap-letter" id="gender" name="gender" placeholder="Male"/>
+          </li>
+          <li>
+            <label for="race">Race</label>
+            <input class="cap-letter" id="race"  name="race" placeholder="God Himself"/>
+          </li>
+          <li>
+            <label for="build">Build</label>
+            <input class="cap-letter" id= "build" name="build" placeholder="To be determined"/>
+          </li>
+          <li>
+            <label for="exp">Experience Points</label>
+            <input id ="exp"name="exp" placeholder="3240"/>
+          </li>
+        </ul>
+      </section>
+    </header>
+    <main>
+      <section>
+        <section class="attributes">
+          <div class="scores">
+            <ul>
+              <li>
+                <div class="score">
+                  <label for="Strengthscore">Strength</label>
+                  <input id="Strengthscore"  name="Strengthscore" placeholder="10"/>
+                </div>
+                <div class="modifier">
+                  <input name="Strengthmod" placeholder="+0"/>
+                </div>
+              </li>
+              <li>
+                <div class="score">
+                  <label for="Dexterityscore">Dexterity</label>
+                  <input id="Dexterityscore" name="Dexterityscore" placeholder="10"/>
+                </div>
+                <div class="modifier">
+                  <input name="Dexteritymod" placeholder="+0"/>
+                </div>
+              </li>
+              <li>
+                <div class="score">
+                  <label for="Constitutionscore">Constitution</label>
+                  <input id ="Constitutionscore" name="Constitutionscore" placeholder="10"/>
+                </div>
+                <div class="modifier">
+                  <input name="Constitutionmod" placeholder="+0"/>
+                </div>
+              </li>
+              <li>
+                <div class="score">
+                  <label for="Wisdomscore">Wisdom</label>
+                  <input id="Wisdomscore" name="Wisdomscore" placeholder="10"/>
+                </div>
+                <div class="modifier">
+                  <input name="Wisdommod" placeholder="+0"/>
+                </div>
+              </li>
+              <li>
+                <div class="score">
+                  <label for="Intelligencescore">Intelligence</label>
+                  <input id ="Intelligencescore" name="Intelligencescore" placeholder="10"/>
+                </div>
+                <div class="modifier">
+                  <input class="cap-letter" name="Intelligencemod" placeholder="+0"/>
+                </div>
+              </li>
+              <li>
+                <div class="score">
+                  <label for="Charismascore">Charisma</label>
+                  <input id="Charismascore" name="Charismascore" placeholder="10"/>
+                </div>
+                <div class="modifier">
+                  <input class="cap-letter" name="Charismamod" placeholder="+0"/>
+                </div>
+              </li>
+            </ul>
           </div>
           <div class='col-md-4'>
             <button class='' data-id='{{character.id}}'>DELETE</button>
           </div>
         </div>
+
       {{/each}}
     </div>
+      </section>
+    </main>
+  </form>
+
+<div class="community">
+  <a href="https://www.youtube.com/@criticalrole">Community content brought to you by our friends at Critical Role</a>
+    <div class="video">
+      <iframe width="700" height="500" src="https://www.youtube.com/embed/BRXBvjrJXQk?autoplay=1" title="New Animated Campaign 3 Opening Title | It’s Thursday Night (Critical Role Theme)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    
+</div>
+
+  {{/if}}
+  
+  {{#if characters.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Characters:</h3>
+
+    {{#each characters as |character|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4>
+          <a class="cap-letter" href="/character/{{character.id}}">{{character.name}}</a>
+        </h4>
+      </div>
+      <div class="col-md-4">
+        <button class="" data-id="{{character.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
   {{/if}}
   <footer>
     <p class='cap-letter'>
