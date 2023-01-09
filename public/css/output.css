@@ -610,7 +610,7 @@ form.charsheet label {
   font-size: 12px;
 }
 form.charsheet header {
-  display: flex;
+  display: grid;
   
   align-items: stretch;
 }
@@ -643,11 +643,11 @@ form.charsheet header section.misc {
 }
 form.charsheet header section.misc ul {
   padding: 10px 0px 5px 0px;
-  display: flex;
+  display: grid;
 }
 form.charsheet header section.misc ul li {
   width: 33.33333%;
-  display: flex;
+  display: grid;
 }
 form.charsheet header section.misc ul li label {
   margin-bottom: 5px;
@@ -657,7 +657,7 @@ form.charsheet header section.misc ul li input {
   border-bottom: 1px solid #ddd;
 }
 form.charsheet main {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   margin-top: 20px;
 }
@@ -680,12 +680,12 @@ form.charsheet main div.label-container > label {
 }
 form.charsheet main > section {
   width: 32%;
-  display: flex;
+  display: grid;
   
 }
 form.charsheet main > section section.attributes {
   width: 100%;
-  display: flex;
+  display: grid;
   justify-content: space-between;
 }
 form.charsheet main > section section.attributes div.scores {
@@ -748,7 +748,7 @@ form.charsheet main > section section.attributes div.attr-applications div.inspi
   border-radius: 10px;
 }
 form.charsheet main > section section.attributes div.attr-applications div.proficiencybonus {
-  display: flex;
+  display: grid;
   
 }
 form.charsheet main > section section.attributes div.attr-applications div.proficiencybonus input {
@@ -772,7 +772,7 @@ form.charsheet main > section section.attributes div.attr-applications div.list-
   font-weight: bold;
 }
 form.charsheet main > section section.attributes div.attr-applications div.list-section ul li {
-  display: flex;
+  display: grid;
   align-items: center;
 }
 form.charsheet main > section section.attributes div.attr-applications div.list-section ul li > * {
@@ -811,7 +811,7 @@ form.charsheet main > section section.attributes div.attr-applications div.list-
 }
 
 form.charsheet main{
-  display: flex;
+  display: grid;
 
 }
 section.attributes{
@@ -821,7 +821,7 @@ section.attributes{
 
 
 section.equipment-container{
-   display: flex;
+  display: grid;
   
 }
 
@@ -864,7 +864,7 @@ form.charsheet main section.flavor {
 }
 form.charsheet main section.flavor div {
   background: white;
-  display: flex;
+  display: grid;
   flex-direction: column-reverse;
   padding: 5px;
   border: 1px solid black;
@@ -895,7 +895,7 @@ form.charsheet main section.features div {
   padding: 10px;
   border: 1px solid black;
   border-radius: 10px;
-  display: flex;
+  display: grid;
   flex-direction: column-reverse;
 }
 form.charsheet main section.features div label {
@@ -908,14 +908,15 @@ form.charsheet main section.features div textarea {
 } */
 
 body{
-  display: flex;
+  display: grid;
 }
 
 h1{
   height: 100px;
   background-image: url(https://images.unsplash.com/photo-1607496220321-0c71c2fdbffb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80);
   color: #9ca3af;
-  display: flex;
+  display: grid;
+  grid-column: 2;
   font-size: 48px;
   font-family:cursive,-fantasy;
   
@@ -927,7 +928,7 @@ h1{
 
 
 .form-group{
-  display: flex;
+  display: grid;
   justify-content: center;
   background-color: #9ca3af;
   padding: .5em;
@@ -938,7 +939,7 @@ h1{
 
 
 .music{
-  display: flex;
+  display: grid;
   justify-content: center;
   background-repeat: no-repeat;
   width: auto;
@@ -953,7 +954,7 @@ h1{
 
 
 .button1{
-  display: flex;
+  display: grid;
   font-size: x-large;
   
 }
@@ -1020,7 +1021,7 @@ form.form.signup-form{
 }
 
 .video{
-  display:flex;
+  display: grid;
   justify-content: center;
   border: #9ca3af;
   padding: .5em;
@@ -1030,7 +1031,7 @@ form.form.signup-form{
 }
 
 div.col-md-6{
-  display: flex;
+  display: grid;
   margin-right: 8em;
   gap: 2em;
   justify-content: end;
@@ -1038,7 +1039,7 @@ div.col-md-6{
 
 
 .community{
-  display: flex;
+  display: grid;
   font: bolder;
   color:#fff;
   padding: 1em;
@@ -1054,12 +1055,12 @@ div.col-md-6{
 }
 
 a.community{
-  display: flex;
+  display: grid;
   justify-content: center;
 }
 
 div.button1{
-  display: flex;
+  display: grid;
   justify-content: center;
   gap: 1.5em;
   background-image: url(https://images.unsplash.com/photo-1510218830377-2e994ea9087d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1916&q=80);
@@ -1075,7 +1076,7 @@ a.btn.create-new{
   font-size: larger
 }
 .btn.create-new{
-  display: flex;
+  display: grid;
   height: 25px;
   justify-content: center;
   color:#fff;
@@ -1085,7 +1086,7 @@ a.btn.create-new{
 footer{
   color: #fdfdfd;
   background-color: #aa2f2f;
-  display: flex;
+  display: grid;
   justify-content: center;
   font-size: 18px;
   font-family: cursive,-fantasy;
