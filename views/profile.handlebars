@@ -1,6 +1,6 @@
-<div class="row">
-  <div class="col-auto">
-    <h2 class="cap-letter">Welcome {{name}}!</h2>
+<div class='row'>
+  <div class='col-auto'>
+    <h2 class='cap-letter'>Welcome {{name}}!</h2>
   </div>
 </div>
 
@@ -9,10 +9,26 @@
     <h2 class="create-new">Enter New Character Info:</h2>
   </div>
 </div>
+
 <div>
-  <a href="/character" class="btn create-new" >Create New Character</a>
+  <a href='/character' class='btn create-new'>Create New Character</a>
 </div>
 
+
+<div>
+  {{#if characters.length}}
+    <div class='col-md-6 project-list'>
+      <h3>Current Characters:</h3>
+
+      {{#each characters as |character|}}
+        <div class='row mb-2'>
+          <div class='col-md-8'>
+            <h4>
+              <a
+                class='cap-letter'
+                href='/character/{{character.id}}'
+              >{{character.name}}</a>
+            </h4>
 
 
   {{#if logged_in}}
@@ -112,20 +128,13 @@
               </li>
             </ul>
           </div>
-      <section> 
-        </section>
-        <section id = "char-equipment" class="equipment">
-          <div>
-            <label>Inventory</label>
-            </div>
-            <textarea placeholder="Item list here"></textarea>
+          <div class='col-md-4'>
+            <button class='' data-id='{{character.id}}'>DELETE</button>
           </div>
-        </section>
-      </section>
-      <section>
-        <div class="col-md-6">
-          <button type="submit" class="submit-character btn btn-dark">Save Character</button>
         </div>
+
+      {{/each}}
+    </div>
       </section>
     </main>
   </form>
@@ -159,11 +168,13 @@
   </div>
   {{/if}}
   <footer>
-    <p class="cap-letter">
-      Thank you {{name}} for using our character generator!
-    </p> 
+    <p class='cap-letter'>
+      Thank you
+      {{name}}
+      for using our character generator!
+    </p>
   </footer>
 </div>
 
-<script src="./js/create.js"></script>
-<script src="./js/profile.js"></script>
+<script src='./js/create.js'></script>
+<script src='./js/profile.js'></script>

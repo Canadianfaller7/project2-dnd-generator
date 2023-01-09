@@ -8,7 +8,7 @@ const statsData = [
     constitution: 19,
     wisdom: 6,
     intelligence: 9,
-    charisma: 10
+    charisma: 10,
   },
   {
     id: 2,
@@ -17,8 +17,8 @@ const statsData = [
     constitution: 16,
     wisdom: 16,
     intelligence: 12,
-    charisma: 8
-  }
+    charisma: 8,
+  },
 ];
 
 const seedStats = () => Stats.bulkCreate(statsData);

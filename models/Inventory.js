@@ -15,8 +15,8 @@ Inventory.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1]
-      }
+        len: [1],
+      },
     },
     character_id: {
       type: DataTypes.INTEGER,
@@ -26,7 +26,7 @@ Inventory.init(
       },
     },
   },
-    {
+  {
     sequelize,
     timestamps: false,
     underscored: true,
