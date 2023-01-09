@@ -30,7 +30,7 @@ Please refer to the LICENSE in the repo.
 ## Screenshots
 
 - Main screen
-![Alt text](public/assets/images/main-page.png?raw=true "Optional Title")
+![Alt text](.public/assets/images/main-page.png?raw=true "Optional Title")
 
 - Login
 ![Alt text](./assets/images/log-in.png?raw=true "Optional Title")
