@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./*.html,js'],
+  content: ["./main.handlebars"],
   theme: {
     screens: {
       sm: '480px',
@@ -11,7 +11,8 @@ module.exports = {
     extend: {
       colors:{ 
         royalPurple: "#3730a3"
-        royalGrey:   ""
+       
+        darkRed:"#aa2f2f"
 
       }
     },

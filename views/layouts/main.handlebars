@@ -8,36 +8,42 @@
   </head>
 
   <body>
-    <div class="flex-column justify-space-around">
-      <header class="heading">
+    <div class="heading">
         <h1>
-          <span role="img" aria-label="dragon">&#128009</span>
-          <a href="/">D&D Character Generator</a>
+          <span role="img" aria-label="dragon">&#128009 
+          <a href="/">D&D Character Generator</a></span>
         </h1>
-
-        <nav>
-          <!-- Conditionally render login or logout links -->
-          {{#if logged_in}}
-          <a href="/profile">profile</a> |
-          <button class="no-button" id="logout">logout</button>
-          {{else}}
-          <button><a href="/login">login</a></button>
-          <button><a href="/signup">Sign up</a></button>
-          {{/if}}
-        </nav>
-      </header>
-      
-      <main>
-
-        <!-- Render the sub layout -->
-        {{{ body }}}
-        
-      </main>
-      <footer>
-        
-      </footer>
     </div>
 
+    
+    <nav>
+      <div class="hero"></div>
+    {{#if logged_in}}
+      <div class="profilebutton">
+        <a href="/profile">Profile</a> |
+        <button class="no-button" id="logout">Logout</button>
+      </div>
+      {{else}}
+        <div class="button1">
+          <button><a href="/login">Login</a></button>
+          <button><a href="/signup">Sign Up</a></button>
+        </div>
+        <footer>
+         <div class="music">
+            <iframe width="700" height="500" src="https://www.youtube.com/embed/eb73_mE0S-k?autoplay=1" title="Tavern Dance | RPG/D&D Tavern/Inn Music | 1 Hour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+          </div>
+        </footer>  
+        <div class="mainbottom"></div>
+      {{/if}}
+    </nav>
+    <!-- Conditionally render login or logout links -->
+      
+      <main>
+        <!-- Render the sub layout -->
+        {{{ body }}}
+      </main>
+      
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
     <script src="/js/logout.js"></script>

@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     );
 
     res.render('homepage', {
-      characters,
+      ...characters,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
 // renders the create new character form if the user is logged in
 router.get('/character', (req, res) => {
   res.render('character', {
-    logged_in: true
+    logged_in: true,
   });
 });
 
@@ -44,8 +44,8 @@ router.get('/character/:id', async (req, res) => {
           attributes: ['name'],
         },
         {
-          model: Inventory
-        }
+          model: Inventory,
+        },
       ],
     });
 
@@ -53,7 +53,7 @@ router.get('/character/:id', async (req, res) => {
 
     res.render('selectedcharacter', {
       ...character,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -67,10 +67,10 @@ router.get('/profile', withAuth, async (req, res) => {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [
-        { 
+        {
           model: Character,
-          attributes: ['id'] ['name']
-        }
+          attributes: ['id']['name'],
+        },
       ],
     });
 
@@ -80,7 +80,6 @@ router.get('/profile', withAuth, async (req, res) => {
       ...user,
       logged_in: true,
     });
-
   } catch (err) {
     res.status(500).json(err);
   }

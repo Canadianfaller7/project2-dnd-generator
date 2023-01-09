@@ -15,7 +15,7 @@ const characterData = [
     wisdom: 6,
     intelligence: 9,
     charisma: 10,
-    user_id: 1
+    user_id: 1,
   },
   {
     name: 'Vilithrax',
@@ -31,8 +31,8 @@ const characterData = [
     wisdom: 16,
     intelligence: 12,
     charisma: 8,
-    user_id: 2
-  }
+    user_id: 2,
+  },
 ];
 
 const seedCharacters = () => Character.bulkCreate(characterData);

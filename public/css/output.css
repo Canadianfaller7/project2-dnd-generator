@@ -216,17 +216,17 @@ select {
 2. Remove default button styles.
 */
 
-button,
+/* button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
   -webkit-appearance: button;
   /* 1 */
-  background-color: transparent;
+  /* background-color: transparent;
   /* 2 */
-  background-image: none;
+  /* background-image: none; */ 
   /* 2 */
-}
+/* }  */
 
 /*
 Use the modern Firefox focus style for all focusable elements.
@@ -534,6 +534,14 @@ div .create-new{
   display: none !important;
 }
 
+.cap-letter {
+  text-transform: capitalize;
+}
+
+.modifier{
+  padding: 1em;
+}
+
 textarea {
   font-size: 12px;
   text-align: left;
@@ -542,7 +550,7 @@ textarea {
   padding: 10px;
   resize: none;
   overflow: hidden;
-  height: 15em;
+  height: 20em;
 }
 
 input[type=checkbox] {
@@ -562,8 +570,8 @@ form.charsheet {
   margin-top: 10px;
 }
 form.charsheet div.textblock {
-  display: flex;
-  flex-direction: column-reverse;
+  display: grid;
+  
   width: 100%;
   align-items: center;
 }
@@ -602,8 +610,8 @@ form.charsheet label {
   font-size: 12px;
 }
 form.charsheet header {
-  display: flex;
-  align-contents: stretch;
+  display: grid;
+  
   align-items: stretch;
 }
 form.charsheet header section.charname {
@@ -613,8 +621,7 @@ form.charsheet header section.charname {
   padding: 5px 0;
   background-color: #eee;
   width: 30%;
-  display: flex;
-  flex-direction: column-reverse;
+  display: grid;
   bottom: 0;
   top: 0;
   margin: auto;
@@ -636,13 +643,11 @@ form.charsheet header section.misc {
 }
 form.charsheet header section.misc ul {
   padding: 10px 0px 5px 0px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
 }
 form.charsheet header section.misc ul li {
   width: 33.33333%;
-  display: flex;
-  flex-direction: column-reverse;
+  display: grid;
 }
 form.charsheet header section.misc ul li label {
   margin-bottom: 5px;
@@ -652,7 +657,7 @@ form.charsheet header section.misc ul li input {
   border-bottom: 1px solid #ddd;
 }
 form.charsheet main {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   margin-top: 20px;
 }
@@ -675,13 +680,12 @@ form.charsheet main div.label-container > label {
 }
 form.charsheet main > section {
   width: 32%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  
 }
 form.charsheet main > section section.attributes {
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  display: grid;
   justify-content: space-between;
 }
 form.charsheet main > section section.attributes div.scores {
@@ -696,7 +700,6 @@ form.charsheet main > section section.attributes div.scores label {
 }
 form.charsheet main > section section.attributes div.scores ul {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   height: 100%;
@@ -708,7 +711,6 @@ form.charsheet main > section section.attributes div.scores ul li {
   border: 1px solid black;
   text-align: center;
   display: flex;
-  flex-direction: column;
   border-radius: 10px;
 }
 form.charsheet main > section section.attributes div.scores ul li input {
@@ -736,8 +738,6 @@ form.charsheet main > section section.attributes div.scores ul li div.modifier i
 }
 form.charsheet main > section section.attributes div.attr-applications div.inspiration {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
 }
 form.charsheet main > section section.attributes div.attr-applications div.inspiration input {
   -webkit-appearance: none;
@@ -748,9 +748,8 @@ form.charsheet main > section section.attributes div.attr-applications div.inspi
   border-radius: 10px;
 }
 form.charsheet main > section section.attributes div.attr-applications div.proficiencybonus {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  display: grid;
+  
 }
 form.charsheet main > section section.attributes div.attr-applications div.proficiencybonus input {
   width: 30px;
@@ -773,7 +772,7 @@ form.charsheet main > section section.attributes div.attr-applications div.list-
   font-weight: bold;
 }
 form.charsheet main > section section.attributes div.attr-applications div.list-section ul li {
-  display: flex;
+  display: grid;
   align-items: center;
 }
 form.charsheet main > section section.attributes div.attr-applications div.list-section ul li > * {
@@ -805,299 +804,56 @@ form.charsheet main > section section.attributes div.attr-applications div.list-
   border: 1px solid black;
   border-radius: 10px;
   order: 1;
+  font-family: cursive,-fantasy;
 }
 form.charsheet main > section section.attributes div.attr-applications div.list-section ul li input[type=checkbox]:checked {
   background-color: black;
 }
-form.charsheet main > section div.passive-perception {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+
+form.charsheet main{
+  display: grid;
+
 }
-form.charsheet main > section div.passive-perception input {
-  width: 30px;
-  height: 28px;
-  text-align: center;
-  border: 1px solid black;
-  border-radius: 10px;
+section.attributes{
+  display: grid;
 }
-form.charsheet main > section div.otherprofs textarea {
-  height: 26em;
+
+
+
+section.equipment-container{
+  display: grid;
+  
 }
-form.charsheet main section.combat {
-  background-color: #eee;
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 10px;
+
+h3{
+  
+  font-family: cursive,-fantasy;
 }
-form.charsheet main section.combat > div {
-  overflow: hidden;
-}
-form.charsheet main section.combat > div.armorclass, form.charsheet main section.combat > div.initiative, form.charsheet main section.combat > div.speed {
-  flex-basis: 33.333%;
-}
-form.charsheet main section.combat > div.armorclass > div, form.charsheet main section.combat > div.initiative > div, form.charsheet main section.combat > div.speed > div {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  margin-top: 10px;
-}
-form.charsheet main section.combat > div.armorclass > div label, form.charsheet main section.combat > div.initiative > div label, form.charsheet main section.combat > div.speed > div label {
-  font-size: 8px;
-  width: 50px;
-  border: 1px solid black;
-  border-top: 0;
-  background-color: white;
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-radius: 0 0 10px 10px;
-}
-form.charsheet main section.combat > div.armorclass > div input, form.charsheet main section.combat > div.initiative > div input, form.charsheet main section.combat > div.speed > div input {
-  height: 70px;
-  width: 70px;
-  border-radius: 10px;
-  border: 1px solid black;
-  text-align: center;
-  font-size: 30px;
-}
-form.charsheet main section.combat > div.hp {
-  flex-basis: 100%;
-}
-form.charsheet main section.combat > div.hp > div.regular {
-  background-color: white;
-  border: 1px solid black;
-  margin: 10px;
-  margin-bottom: 5px;
-  border-radius: 10px 10px 0 0;
-}
-form.charsheet main section.combat > div.hp > div.regular > div.max {
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline;
-}
-form.charsheet main section.combat > div.hp > div.regular > div.max label {
-  font-size: 10px;
-  text-transform: none;
-  color: #bbb;
-}
-form.charsheet main section.combat > div.hp > div.regular > div.max input {
-  width: 40%;
-  border: 0;
-  border-bottom: 1px solid #ddd;
-  font-size: 12px;
-  text-align: center;
-}
-form.charsheet main section.combat > div.hp > div.regular > div.current {
-  display: flex;
-  flex-direction: column-reverse;
-}
-form.charsheet main section.combat > div.hp > div.regular > div.current input {
-  border: 0;
-  width: 100%;
-  padding: 1em 0;
-  font-size: 20px;
-  text-align: center;
-}
-form.charsheet main section.combat > div.hp > div.regular > div.current label {
-  font-size: 10px;
-  padding-bottom: 5px;
-  text-align: center;
-  font-weight: bold;
-}
-form.charsheet main section.combat > div.hp > div.temporary {
-  margin: 10px;
-  margin-top: 0;
-  border: 1px solid black;
-  border-radius: 0 0 10px 10px;
-  display: flex;
-  flex-direction: column-reverse;
-  background-color: white;
-}
-form.charsheet main section.combat > div.hp > div.temporary input {
-  padding: 1em 0;
-  font-size: 20px;
-  border: 0;
-  text-align: center;
-}
-form.charsheet main section.combat > div.hp > div.temporary label {
-  font-size: 10px;
-  padding-bottom: 5px;
-  text-align: center;
-  font-weight: bold;
-}
-form.charsheet main section.combat > div.hitdice, form.charsheet main section.combat > div.deathsaves {
-  flex: 1 50%;
-  height: 100px;
-}
-form.charsheet main section.combat > div.hitdice > div, form.charsheet main section.combat > div.deathsaves > div {
-  height: 80px;
-}
-form.charsheet main section.combat > div.hitdice > div {
-  background-color: white;
-  margin: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-}
-form.charsheet main section.combat > div.hitdice > div > div.total {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-around;
-  padding: 5px 0;
-}
-form.charsheet main section.combat > div.hitdice > div > div.total label {
-  font-size: 10px;
-  color: #bbb;
-  margin: 0.25em;
-  text-transform: none;
-}
-form.charsheet main section.combat > div.hitdice > div > div.total input {
-  font-size: 12px;
-  flex-grow: 1;
-  border: 0;
-  border-bottom: 1px solid #ddd;
-  width: 50%;
-  margin-right: 0.25em;
-  padding: 0 0.25em;
-  text-align: center;
-}
-form.charsheet main section.combat > div.hitdice > div > div.remaining {
-  flex: 1;
-  display: flex;
-  flex-direction: column-reverse;
-}
-form.charsheet main section.combat > div.hitdice > div > div.remaining label {
-  text-align: center;
-  padding: 2px;
-  font-size: 10px;
-}
-form.charsheet main section.combat > div.hitdice > div > div.remaining input {
-  text-align: center;
-  border: 0;
-  flex: 1;
-}
-form.charsheet main section.combat > div.deathsaves > div {
-  margin: 10px;
-  background: white;
-  border: 1px solid black;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column-reverse;
-}
-form.charsheet main section.combat > div.deathsaves > div > div.label {
-  text-align: center;
-}
-form.charsheet main section.combat > div.deathsaves > div > div.label label {
-  font-size: 10px;
-}
-form.charsheet main section.combat > div.deathsaves > div > div.marks {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-}
-form.charsheet main section.combat > div.deathsaves > div > div.marks div.deathsuccesses, form.charsheet main section.combat > div.deathsaves > div > div.marks div.deathfails {
-  display: flex;
-  align-items: center;
-}
-form.charsheet main section.combat > div.deathsaves > div > div.marks div.deathsuccesses label, form.charsheet main section.combat > div.deathsaves > div > div.marks div.deathfails label {
-  font-size: 8px;
-  text-align: right;
-  flex: 1 50%;
-}
-form.charsheet main section.combat > div.deathsaves > div div.bubbles {
-  flex: 1 40%;
-  margin-left: 5px;
-}
-form.charsheet main section.combat > div.deathsaves > div div.bubbles input[type=checkbox] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 10px;
-  height: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
-}
-form.charsheet main section.combat > div.deathsaves > div div.bubbles input[type=checkbox]:checked {
-  background-color: black;
-}
-form.charsheet main section.attacksandspellcasting {
-  border: 1px solid black;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-form.charsheet main section.attacksandspellcasting > div {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-}
-form.charsheet main section.attacksandspellcasting > div > label {
-  order: 3;
-  text-align: center;
-}
-form.charsheet main section.attacksandspellcasting > div > table {
-  width: 100%;
-}
-form.charsheet main section.attacksandspellcasting > div > table th {
-  font-size: 10px;
-  color: #ddd;
-}
-form.charsheet main section.attacksandspellcasting > div > table input {
-  width: calc(100% - 4px);
-  border: 0;
-  background-color: #eee;
-  font-size: 10px;
-  padding: 3px;
-}
-form.charsheet main section.attacksandspellcasting > div textarea {
-  border: 0;
-}
+
+
+
+
+
+
+
+
+
 form.charsheet main section.equipment {
   border: 1px solid black;
   border-radius: 10px;
   margin-top: 10px;
 }
-form.charsheet main section.equipment > div {
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-form.charsheet main section.equipment > div > div.money ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-form.charsheet main section.equipment > div > div.money ul > li {
-  display: flex;
-  align-items: center;
-}
-form.charsheet main section.equipment > div > div.money ul > li label {
-  border: 1px solid black;
-  border-radius: 10px 0 0 10px;
-  border-right: 0;
-  width: 20px;
-  font-size: 8px;
-  text-align: center;
-  padding: 3px 0;
-}
-form.charsheet main section.equipment > div > div.money ul > li input {
-  border: 1px solid black;
-  border-radius: 10px;
-  width: 40px;
-  padding: 10px 3px;
-  font-size: 12px;
-  text-align: center;
+form.charsheet main section.equipment > div > input{
+  border: 1px dotted black;
 }
 form.charsheet main section.equipment > div > label {
+  
   order: 3;
   text-align: center;
   flex: 100%;
 }
 form.charsheet main section.equipment > div > textarea {
+  border: 1px solid black;
   flex: 1;
   border: 0;
 }
@@ -1108,7 +864,7 @@ form.charsheet main section.flavor {
 }
 form.charsheet main section.flavor div {
   background: white;
-  display: flex;
+  display: grid;
   flex-direction: column-reverse;
   padding: 5px;
   border: 1px solid black;
@@ -1139,7 +895,7 @@ form.charsheet main section.features div {
   padding: 10px;
   border: 1px solid black;
   border-radius: 10px;
-  display: flex;
+  display: grid;
   flex-direction: column-reverse;
 }
 form.charsheet main section.features div label {
@@ -1149,4 +905,214 @@ form.charsheet main section.features div textarea {
   border: 0;
   padding: 5px;
   height: 43em;
+} */
+
+body{
+  display: grid;
 }
+
+h1{
+  height: 100px;
+  background-image: url(https://images.unsplash.com/photo-1607496220321-0c71c2fdbffb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80);
+  color: #9ca3af;
+  display: grid;
+  grid-column: 2;
+  font-size: 48px;
+  font-family:cursive,-fantasy;
+  
+}
+.crit:hover{
+  background-color: #9ca3af;
+  
+}
+
+
+.form-group{
+  display: grid;
+  justify-content: center;
+  background-color: #9ca3af;
+  padding: .5em;
+  font-size: large;
+  font-family:cursive,-fantasy;
+}
+
+
+
+.music{
+  display: grid;
+  justify-content: center;
+  background-repeat: no-repeat;
+  width: auto;
+  image-rendering: auto;
+}
+
+.form-input{
+  color: #aa2f2f;
+  font-family:cursive,-fantasy;
+}
+
+
+
+.button1{
+  display: grid;
+  font-size: x-large;
+  
+}
+
+a:hover{
+  background-color: #9ca3af;
+}
+button:hover{
+  background-color: #9ca3af;
+}
+
+.hero{
+  height: 1200px;;
+  width: 100%;
+  background-size: cover;
+  border-style: solid;
+  background-image: url("https://images.unsplash.com/photo-1514539079130-25950c84af65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80");
+  width: auto;
+  image-rendering: auto;
+  background-repeat: no-repeat;
+  
+  
+}
+
+.mainbottom{
+  height:auto;
+  background-color: #9ca3af;
+}
+
+button{
+  font-family:cursive,-fantasy;
+  font-size: 20px;
+  background-color: #aa2f2f;
+  color: #fff;
+}
+
+
+
+
+create-new{
+  font-family:cursive,-fantasy;
+  
+}
+
+form.form.signup-form{
+  font-family:cursive,-fantasy;
+  
+}
+.submit-character.btn.btn-dark{
+  background-color: #aa2f2f;
+  font-family:cursive,-fantasy;
+  color: #fff;
+
+}
+.submit-character.btn.btn-dark:hover{
+  background-color: #9ca3af;
+}
+.profilebutton{
+  font-size: large;
+  background-color: #aa2f2f;
+  font-family:cursive,-fantasy;
+  color: #fff;
+
+}
+
+.video{
+  display: grid;
+  justify-content: center;
+  border: #9ca3af;
+  padding: .5em;
+  border-style: ridge;
+  border-radius: 1em;
+  box-shadow: #fdfdfd;
+}
+
+div.col-md-6{
+  display: grid;
+  margin-right: 8em;
+  gap: 2em;
+  justify-content: end;
+}
+
+
+.community{
+  display: grid;
+  font: bolder;
+  color:#fff;
+  padding: 1em;
+  border: #9ca3af;
+  border-style: ridge;
+  border-radius: 5em;
+  justify-content: center;
+  font-size: 23px;
+  font-family:cursive,-fantasy;
+  background-image: url(https://images.unsplash.com/photo-1510218830377-2e994ea9087d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1916&q=80);
+  
+  
+}
+
+a.community{
+  display: grid;
+  justify-content: center;
+}
+
+div.button1{
+  display: grid;
+  justify-content: center;
+  gap: 1.5em;
+  background-image: url(https://images.unsplash.com/photo-1510218830377-2e994ea9087d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1916&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a.btn.create-new:hover{
+  cursor: pointer;
+  background-color: #9ca3af;
+}
+a.btn.create-new{
+  font-size: larger
+}
+.btn.create-new{
+  display: grid;
+  height: 25px;
+  justify-content: center;
+  color:#fff;
+  background-color: #aa2f2f;
+}
+
+footer{
+  color: #fdfdfd;
+  background-color: #aa2f2f;
+  display: grid;
+  justify-content: center;
+  font-size: 18px;
+  font-family: cursive,-fantasy;
+  background-image: url('https://images.unsplash.com/photo-1607496220321-0c71c2fdbffb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGZhbnRhc3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: auto;
+  
+}
+
+input{
+  color: #9ca3af;
+  font-family: cursive,-fantasy;
+
+}
+
+.scores{
+  color: #aa2f2f;
+  font-family: cursive,-fantasy;
+  display: grid;
+  border-style: ridge;
+  border-color: black;
+  justify-content: center;
+  
+}
+
+
+
