@@ -30,22 +30,22 @@ Please refer to the LICENSE in the repo.
 ## Screenshots
 
 - Main screen
-![Alt text](.public/assets/images/main-page.png?raw=true "Optional Title")
+![Alt text](public/assets/images/main-page.png?raw=true "Optional Title")
 
 - Login
-![Alt text](./assets/images/log-in.png?raw=true "Optional Title")
+![Alt text](public/assets/images/log-in.png?raw=true "Optional Title")
 
 - Sign-up
-![Alt text](./assets/images/sign-up.png?raw=true "Optional Title")
+![Alt text](public/assets/images/sign-up.png?raw=true "Optional Title")
 
 - Home Page
-![Alt text](./assets/images/home-page.png?raw=true "Optional Title")
+![Alt text](public/assets/images/home-page.png?raw=true "Optional Title")
 
 - Profile
-![Alt text](./assets/images/profile-page.png?raw=true "Optional Title")
+![Alt text](public/assets/images/profile-page.png?raw=true "Optional Title")
 
 - Selected Character
-![Alt text](./assets/images/selected-character.png?raw=true "Optional Title")
+![Alt text](public/assets/images/selected-character.png?raw=true "Optional Title")
 
 - Create Character
-![Alt text](./assets/images/create-character.png?raw=true "Optional Title")
+![Alt text](public/assets/images/create-character.png?raw=true "Optional Title")
