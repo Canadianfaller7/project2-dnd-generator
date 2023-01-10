@@ -3,7 +3,7 @@
 ## Description
 - This is a full stack website that allows a user to create an account, log in, create a D&D Character, save it to a database and keep up to date on current D&D news!
 
-- As we went through this project the biggest impact was learning how to work as a group, using Git and how to set up a project. We were tasked to work with multiple restAPI's and know to use their information to integrate with eachother in order to get results for the nearest breweries, and to save the returned information into local storage. The layout was built using the Bulma css framework with our project, a CSS framework other than bootstrap.
+- As we went through this project one of the biggest impacts was working as front-end and back-end developers and having to work together to get everything linked up and rendering properly. Communication and Team work had become a big key factor while building this application, because we had to help each other with our assigned tasks to make sure we were able to get the application working properly and styled nicely.
 * [D&D Character Generator](https://dndcharactergenerator.herokuapp.com/ "Named link title")
 
 ## Installation
