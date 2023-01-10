@@ -788,7 +788,6 @@ form.charsheet main{
 
 section.attributes{
   display: grid;
-  hei
 }
 
 div.items{
@@ -1095,6 +1094,14 @@ h2{
   
 }
 
+.charsheet{
+  display: grid;
+  background-image: url('https://images.unsplash.com/photo-1460194436988-671f763436b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+  background-repeat: no-repeat;
+  background-size: auto;  
+  
+}
+
 .charsheet.create-form{
   display: grid;
   background-image: url('https://images.unsplash.com/photo-1460194436988-671f763436b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
@@ -1117,7 +1124,3 @@ section.misc{
   grid-area: 1/3;
   color: ghostwhite
 }
-
-
-
-
